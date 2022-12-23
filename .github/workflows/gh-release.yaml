@@ -45,8 +45,9 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
+          git checkout main
           git add .github/bin/helmRepoIndex
-          git commit -m "chore: update dev helm repo index ($GITHUB_REF)"
+          git commit -m "chore: new binary version ($GITHUB_REF)"
           git push
 
   release:
